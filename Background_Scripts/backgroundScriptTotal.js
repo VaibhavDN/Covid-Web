@@ -1,4 +1,4 @@
-let TotalCovidInfo = require('./models/covid.model');
+let models = require('./models/covid.model');
 const mongoose = require('mongoose');
 const got = require('got');
 const cheerio = require('cheerio');
@@ -65,9 +65,9 @@ async function mongooseFetchAndSaveTotal(){
                     _deaths = split[3];
                     _total_cases = split[4];
                     _date = new Date();
-                    _currentdate = _date.getDate() + '-' + _date.getMonth() + '-' + _date.getFullYear();
+                    _currentdate = _date.getFullYear() + '-' + _date.getMonth() + '-' + _date.getDate();
                     
-                    TotalCovidInfo.deleteMany({current_date: _currentdate}, (err)=>{
+                    models.TotalCovidInfo.deleteMany({current_date: _currentdate}, (err)=>{
                         if(err){
                             console.log(err);
                         }
@@ -76,7 +76,7 @@ async function mongooseFetchAndSaveTotal(){
                         }
                     });
 
-                    const newCountrySave = new TotalCovidInfo({
+                    const newCountrySave = new models.TotalCovidInfo({
                         active_cases: _active_cases,
                         cured: _cured,
                         deaths: _deaths,

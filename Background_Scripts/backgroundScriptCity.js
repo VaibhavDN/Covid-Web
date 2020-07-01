@@ -1,4 +1,4 @@
-let CityCovidInfo = require('./models/covid.model');
+let models = require('./models/covid.model');
 const mongoose = require('mongoose');
 const got = require('got');
 const cheerio = require('cheerio');
@@ -64,11 +64,11 @@ async function mongooseFetchAndSave(){
                 _deaths = split[4];
                 _total_cases = split[5];
                 _date = new Date();
-                _currentdate = _date.getDate() + '-' + _date.getMonth() + '-' + _date.getFullYear();
+                _currentdate = _date.getFullYear() + '-' + _date.getMonth() + '-' + _date.getDate();
             
                 console.log(_city+ ' ' + _active_cases + ' ' +  _cured + ' ' +  _deaths + ' ' +  _total_cases + ' ' +  _currentdate);
                 
-                CityCovidInfo.deleteMany({current_date: _currentdate}, (err)=>{
+                models.CityCovidInfo.deleteMany({current_date: _currentdate}, (err)=>{
                     if(err){
                         console.log(err);
                     }
@@ -77,7 +77,7 @@ async function mongooseFetchAndSave(){
                     }
                 });
 
-                const newSave = new CityCovidInfo({
+                const newSave = new models.CityCovidInfo({
                     city: _city,
                     active_cases: _active_cases,
                     cured: _cured,

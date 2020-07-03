@@ -1,0 +1,88 @@
+#citylisttable{
+    padding: 20px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+}
+
+.thead{
+    background-color: rgb(84, 72, 100);
+    color: aliceblue;
+}
+
+.activeContryCovidInfo{
+    white-space: nowrap;
+    text-align: center;
+    margin: 1% 1% 1% 0%;
+    padding: 18px;
+    border-radius: 10px;
+    background-color: rgba(255, 235, 147, 0.849);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+    flex: 1;
+}
+
+.curedContryCovidInfo{
+    white-space: nowrap;
+    text-align: center;
+    margin: 1% 1% 1% 0%;
+    padding: 18px;
+    border-radius: 10px;
+    background-color: rgba(147, 255, 161, 0.849);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+    flex: 1;
+}
+
+.deathsContryCovidInfo{
+    white-space: nowrap;
+    text-align: center;
+    margin: 1% 1% 1% 0%;
+    padding: 18px;
+    border-radius: 10px;
+    background-color: rgba(255, 147, 147, 0.849);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+    flex: 1;
+}
+
+.totalContryCovidInfo{
+    white-space: nowrap;
+    text-align: center;
+    margin: 1% 0% 1% 0%;
+    padding: 18px;
+    border-radius: 10px;
+    background-color: rgba(190, 192, 201, 0.849);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+    flex: 1;
+}
+
+div.countryCovidInfoWrapper {
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    white-space: nowrap;
+    padding: 0px 20px 0px 20px;
+    border-radius: 10px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+div.countryCovidInfoWrapper::-webkit-scrollbar {
+    display: none;
+}

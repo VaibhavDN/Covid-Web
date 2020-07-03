@@ -1,0 +1,4 @@
+# https://www.robotstxt.org/robotstxt.html
+# Server can't handle scraping. So please don't. _/\_
+User-agent: *
+Disallow:

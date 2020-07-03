@@ -1,0 +1,35 @@
+div.scrollmenu {
+    background-color: #333;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    white-space: nowrap;
+    padding: 10px;
+    margin: -2% 0px 20px 0px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    align-items: center;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+}
+
+div.scrollmenu_wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+div.scrollmenu a {
+    margin: 3px;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+  
+div.scrollmenu a:hover {
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}

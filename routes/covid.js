@@ -7,7 +7,7 @@ router.route('/').get((req, res)=>{
         if(err) res.send('Error!');
         console.log(cityCovidInfo);
     })
-    .sort({current_date: -1, total_cases: -1})
+    .sort({createdAt: -1, total_cases: -1})
     .limit(35)
     .then(covidinfo => res.json(covidinfo))
     .catch(err => res.status(400).json('Error: '+err));
@@ -18,7 +18,7 @@ router.route('/historic').get((req, res)=>{
         if(err) res.send('Error!');
         console.log(cityCovidInfo);
     })
-    .sort({current_date: -1})
+    .sort({createdAt: -1})
     .limit(30)
     .then(covidinfo => res.json(covidinfo))
     .catch(err => res.status(400).json('Error: '+err));
@@ -30,7 +30,7 @@ router.route('/country').get((req, res)=>{
         console.log(totalCovidInfo);
     })
     .limit(1)
-    .sort({current_date: -1})
+    .sort({createdAt: -1})
     .then(covidinfo => res.json(covidinfo))
     .catch(err => res.status(400).json('Error: '+err));
 });
